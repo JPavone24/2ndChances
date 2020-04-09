@@ -17,6 +17,17 @@ router.get("/pets", function(req, res) {
 });
 
 
+router.get("/pets/:petname", function(req, res) {
+    console.log(req.params.petName)
+    PetsData.find({petName: req.params.petname})
+    .then((data) =>{
+        res.json(data)
+    })
+    .catch((error)=>{
+        console.log('error: ', error)
+    })
+  });
+  
 
 
 module.exports = router;
