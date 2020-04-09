@@ -8,7 +8,7 @@ var port = process.env.PORT || 8080;
 var htmlroutes = require('./routes/htmlroutes');
 var apiroutes = require('./routes/apiroutes');
 // Sets up the Express app to handle data parsing
- require('dotenv').config();     
+//  require('dotenv').config();     
 const uri = process.env.MONGODB_URI;
 mongoose.connect( uri, {
    useNewUrlParser: true, 
